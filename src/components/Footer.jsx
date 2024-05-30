@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="footer container">
             <div className="footer-grp">
                 <div className="footer-flex footer-one">
-                    <img src={logo} alt="ballerholic" />
+                    <img src={logo} alt="ballerholic" className="logo" />
                     <div className="form">
                         <input type="text" placeholder='Enter your email' />
                         <button>Subscribe Now</button>
@@ -44,7 +44,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            
+            <hr />
             <div className="line">
                 <div className="socials">
                 <img src={facebook} alt="facebook-icon" />

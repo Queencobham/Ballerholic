@@ -84,13 +84,13 @@ nav .btn a {
   background-color: #3B82F6;
 }
 
-.hamburger {
+/* .menu-toggle {
   display: none;
-}
+} */
 
-.open {
+/* .show {
   display: flex;
-}
+} */
 
 /**** Hero ****/
 .hero {
@@ -481,6 +481,13 @@ hr{
   }
 
   nav ul{
+    display: none;
+  }
+
+  
+
+  
+  /* nav ul {
     position: fixed;
     background-color: #3B82F6;
     top: 0;
@@ -495,42 +502,48 @@ hr{
     transform: translateX(100%);
   }
 
-  .open {
+  nav ul li a {
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 18px;
+  }
+
+  .show {
     right: 0;
     transform: translateX(0);
   }
 
-  .hamburger{
-    display: block;
-    position: relative;
-    z-index: 1100;
-    top: 10%;
-  }
-
-  .fa-bars, .fa-times{
-    padding: 5px;
-    font-size: 2.2rem;
-    background-color: #3B82F6;
-    color: #fff;
-    border-radius: 50%;
-  }
-
-  .fa-times{
-    position: fixed;
-    right: 2.5%;
-    top: 7%;
-  }
-  
   nav .nav-links {
     flex-direction: column;
     gap: 2em;
     margin-top: 80px;
   }
 
-  nav ul li a {
-    font-weight: 700;
-    color: #ffffff;
-    font-size: 18px;
+  .menu-toggle {
+    display: block;
+    z-index: 1000;
+    margin-top: 35px;
+    border: none;
+    background: none;
+  }
+
+  .fa-bars{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #3B82F6;
+    background: none;
+    color: #3B82F6;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+
+  .fa-times{
+   position: absolute;
+   color: #fff;
+   font-size: 1.8rem;
+   position: fixed;
   }
 
   nav .btn{
@@ -545,7 +558,7 @@ hr{
   .btn .get-started {
     color: #3B82F6;
     background-color: #ffffff;
-  } 
+  } */
 
   .hero-text a {
     width: fit-content;
@@ -636,37 +649,11 @@ hr{
   
   .socials{
    left: 45%;
-   margin-bottom: 30px;
+   margin-bottom: 10px;
   }
   
   .line p{
     margin-top: 20px;
-  }
-}
-
-@media only screen and (max-width: 319px){
-  nav .btn{
-    flex-direction: column;
-  }
-
-  nav .nav-links {
-    margin-top: 35px;
-  }
-
-  nav .btn a{
-    width: 100%;
-  }
-
-  .form{
-    flex-direction: column;
-  }
-
-  .form input{
-    width: 100%;
-  }
-
-  .fames a{
-    width: fit-content;
   }
 }
 
@@ -883,3 +870,59 @@ hr{
     text-align: center;
   }
 } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React, { useState } from 'react';
+import logo from '../assets/images/logo.png';
+import { GiHamburgerMenu } from "react-icons/gi";
+import { FaTimes } from "react-icons/fa";
+
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const toggleMenu = () =>{
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  return (
+    <div className='container'>
+      <nav>
+        <img src={logo} alt="ballerholic" />
+         
+          <div className="hamburger" onClick={toggleMenu}>
+            {isMenuOpen ? <FaTimes /> : <GiHamburgerMenu/>}
+          </div>
+
+        <ul className= {isMenuOpen ? "nav-menu open" : "nav-menu"}>
+          <span className="nav-links">
+          <li><a href="#">Navigation</a></li>
+          <li><a href="#">Navigation</a></li>
+          <li><a href="#">Navigation</a></li>
+          <li><a href="#">Navigation</a></li>
+          <li><a href="#">Navigation</a></li>
+          <li><a href="#">Navigation</a></li>
+          </span>
+
+          <span className="btn">
+            <a href="#" className='get-started'>Get started for free</a>
+            <a href="#" className='nav-login'>Login</a>
+          </span>
+        </ul>
+      </nav>
+    </div>
+  );
+};
+
+export default Navbar;
+

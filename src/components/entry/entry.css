@@ -1,0 +1,149 @@
+.register{
+    background-color: #F6F8FC;
+    background-image: url(../../assets/images/Group177.svg), url(../../assets/images/halfcourt.svg), url(../../assets/images/Group178.svg);
+    background-repeat: no-repeat;
+    background-position: right 60px bottom 20px, right 160px top 120px, left 60px top 160px;
+    background-size: 350px, 157.79px, 280px;
+}
+
+.register nav,
+.login nav {
+    padding: 40px;
+    background-color: #fff;
+}
+
+.register nav img,
+.login nav img {
+    position: absolute;
+    top: 28px;
+}
+
+.register form {
+    position: relative;
+    margin: 80px auto;
+    width: 567px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+form::before {
+    content: url("../src/assets/images/Vector1.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+form h2 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.17px;
+    text-align: center;
+    color: #3B82F6;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.register-form .input-box,
+.login-form .input-box {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.register-form .input-box input,
+.login-form .input-box input {
+    width: 100%;
+    border: 0.87px solid #545F71;
+    padding: 10.46px;
+    border-radius: 5.23px;
+    font-size: 13.94px;
+    font-weight: 400px;
+    line-height: 19.17px;
+    margin: 10.46px 0;
+    outline: none;
+    color: #9ba5b7;
+}
+
+.register-form .input-box .signin,
+.login-form .input-box .signup {
+    background-color: #3B82F6;
+    font-weight: 600;
+    color: #fff;
+    border: none
+}
+
+.register-form .input-box span,
+.login-form .input-box span {
+    font-weight: 400;
+    font-size: 12.2px;
+    line-height: 16.55px;
+    color: #545f71;
+    text-transform: capitalize;
+}
+
+.register-form form p,
+.login-form form p {
+    font-weight: 400;
+    font-size: 13.94px;
+    line-height: 19.17px;
+    text-align: center;
+    color: #000;
+    margin-top: 30px;
+}
+
+form p a {
+    color: #3B82F6;
+}
+
+.register-form p,
+.login-form p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16.94px;
+    color: #000;
+    text-align: center;
+    padding-bottom: 30px;
+    margin-top: -30px;
+}
+
+.login {
+    background-color: #F6F8FC;
+    background-image: url(../../assets/images/Group177.svg), url(../../assets/images/halfcourt.svg), url(../../assets/images/Group176.png);
+    background-repeat: no-repeat;
+    background-position: right 140px bottom 10px, right 160px top 120px, left 70px top 120px;
+    background-size: 310px, 157.79px, 318px;
+}
+
+.login-form form {
+    position: relative;
+    margin: 80px auto;
+    width: 500px;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+/*** media queries ***/
+
+@media only screen and (max-width: 649px){
+    .register form, .login form{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1292px){
+    .register, .login{
+        background-image: none;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    .login{
+        height: 100vh;
+    }
+
+    .login-form form {
+       margin: 100px auto;
+    }
+}
