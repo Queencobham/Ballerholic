@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import logo from "../../assets/images/logo.png"
 import "./entry.css"
 
@@ -6,7 +7,7 @@ const Register = () => {
     return (
         <div className='register'>
             <nav>
-                <img src={logo} alt="Ballerholic" />
+              <Link to="/"><img src={logo} alt="Ballerholic" /></Link>
             </nav>
             <div className="register-form">
                 <form>
@@ -30,7 +31,7 @@ const Register = () => {
                     <div className="input-box">
                       <input type="submit" value="sign in" className="signin" />
                     </div>
-                    <p>already have an account? <a href="#">sign in</a></p>
+                    <p>already have an account?<Link to="/login">sign in</Link></p>
                 </form>
                 <p>copyright @ballerholic2023</p>
             </div>

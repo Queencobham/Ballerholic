@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Hero = () => {
     return (
         <section className="hero">
@@ -9,7 +11,7 @@ const Hero = () => {
                     <h2 className="hero-text-second">Faucibus vitae placerat adipiscing cursus aliquet dignissim.
                         Faucibus sed vel sed vitae. Interdum a.
                     </h2>
-                    <a href="#" className='get-started'>Get started for free</a>
+                    <Link to="/register" className='get-started'>Get started for free</Link>
                 </div>
             </div>
         </section>

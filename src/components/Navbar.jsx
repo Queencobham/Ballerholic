@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 import logo from '../assets/images/logo.png';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaTimes } from "react-icons/fa";
@@ -30,8 +31,8 @@ const Navbar = () => {
           </span>
 
           <span className="btn">
-            <a href="#" className='get-started'>Get started for free</a>
-            <a href="#" className='nav-login'>Login</a>
+            <Link to="/register" className='get-started'>Get started for free</Link>
+            <Link to="/login" className='nav-login'>Login</Link>
           </span>
         </ul>
       </nav>

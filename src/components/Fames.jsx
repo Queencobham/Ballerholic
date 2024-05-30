@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom"
+
 const Fames = () => {
     return (
         <div className='fames'>
             <p>Fames congue sed turpis integer mauris nulla nec Lectus at tristique.</p>
-            <a href="#" className="fames-btn">Get started for free</a>
+            <Link to="/register" className="fames-btn">Get started for free</Link>
         </div>
     )
 }
