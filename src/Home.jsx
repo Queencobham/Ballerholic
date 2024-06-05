@@ -6,6 +6,7 @@ import Partners from './components/Partners'
 import Fames from './components/Fames'
 import Footer from './components/Footer'
 import Testimonial from './components/Testimonial'
+// import Slider from "./components/slider/Slider"
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Testimonial />
       <Fames />
       <Footer />
+      {/* <Slider /> */}
     </div>
   )
 }
