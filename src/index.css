@@ -576,7 +576,7 @@ hr{
   .fa-times{
     position: fixed;
     right: 2.5%;
-    top: 6.7%;
+    top: 5%;
   }
   
   nav .nav-links {
@@ -605,6 +605,11 @@ hr{
     color: #3B82F6;
     background-color: #ffffff;
   } 
+
+  .testimonial-text p {
+    max-width: 80%;
+  }
+  
 }
 
 @media only screen and (max-width: 768px) {

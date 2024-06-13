@@ -41,11 +41,11 @@ const Testimonial = () => {
             <p>{slide.content}</p>
             <h4>{slide.name}</h4>
             <button className="nav prev" onClick={prevSlide}>
-        <IoIosArrowDropleft />
-      </button>
-      <button className="nav next" onClick={nextSlide}>
-        <IoIosArrowDropright />
-      </button>
+              <IoIosArrowDropleft />
+            </button>
+            <button className="nav next" onClick={nextSlide}>
+              <IoIosArrowDropright />
+            </button>
           </div>
         ))}
       </div>
